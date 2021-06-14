@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+header{
+    background: linear-gradient(to right,rgba(8, 58, 99, 0.212),rgba(19, 146, 184, 0.199)),url(../Imagenes/equipo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+}
+body{
+    background: url(../Imagenes/textura2.jpg);
+}
+.grid{
+    height: 100%;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    grid-column-gap: 20px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    grid-column-gap: 20px;
+    margin-bottom: 3rem;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+section{
+    padding: 3rem 0;
+}
+/* Navegador */
+nav{
+    background: rgba(0, 0, 0, 0.466);
+    height: 90px;
+}
+/*Logo*/
+.logo-container{
+    grid-column: 1/4;
+}
+.logo-container p{
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Lobster', cursive;
+}
+/*Enlaces*/
+.menu-container{
+    display: none;
+}
+.enlaces-container{
+    grid-column: 4/11;
+}
+.enlaces-container a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+}
+.enlace-inicio i{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.enlaces-container a:hover{
+    color: rgb(48, 201, 27);
+}
+.enlaces-container>ul{
+    display: flex;
+    justify-content: center;
+}
+.enlaces-container ul{
+    list-style: none;
+}
+.enlaces-container>ul>li>a{
+    color: white;
+    font-weight: 700;
+    display: block;
+}
+.enlaces-container ul ul{
+    transform: scale(0);
+    position: absolute;
+    background: white;
+    margin-top: 10px;
+}
+.enlaces-container ul ul::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.enlaces-container ul ul a{
+    color: black;
+    font-weight: 700;
+}
+.enlaces-container>ul>li:hover >ul{
+    transform: scale(1);
+    transition: .4s;
+}
+
+
+.compra-container{
+    grid-column: 11/13;
+    text-align: end;
+}
+.compra-container a{
+    background: rgb(94, 185, 42);
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.compra-container a:hover{
+    background: black;
+    color: rgb(94, 185, 42);
+    transition: .4s;
+}
+
+/*Encabezado*/
+.encabezado{
+    height: 100%;
+}
+.encabezado-text{
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.encabezado-text h1{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Lobster', cursive;
+    color: rgb(202, 255, 251);
+    text-shadow: black 0 0 10px;
+}
+.subtitulo2{
+    display: none;
+}
+.encabezado-text p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 20px;
+}
+/*Section:Empresa*/
+.empresa-img{
+    grid-column: 1/6;
+}
+.empresa-img img{
+    object-fit: cover;
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+}
+.empresa-text{
+    grid-column: 7/13;
+    height: 100%;
+    padding: 20px 0;
+}
+.empresa-text h2{
+    font-size: 30px;
+}
+.empresa-text p{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+}
+/*Section:Personal*/
+#personal{
+    background: rgba(128, 128, 128, 0.192);
+}
+.personal-text{
+    grid-column: 1/7;
+    height: 100%;
+    padding: 20px 0;
+}
+.personal-text h2{
+    font-size: 30px;
+}
+.personal-text p{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+}
+.personal-img{
+    grid-column: 8/13;
+}
+.personal-img img{
+    object-fit: cover;
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+}
+/* Mision y Vision */
+.mision-container{
+    grid-column: 1/7;
+}
+.vision-container{
+    grid-column: 7/13;
+}
+.mision-vision-container{
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(122, 3, 122);
+    color: white;
+}
+.mision-vision-img{
+    max-height: 170px;
+    max-width: 170px;
+}
+.mision-vision-img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.mision-vision-text{
+    margin-left: 30px;
+}
+.mision-vision-text p{
+    margin-top: 15px;
+    line-height: 25px;
+}
+/*Recomendaciones*/
+#recomendaciones{
+    background: rgba(128, 128, 128, 0.192);
+}
+.encabezado-section{
+    grid-column: 1/-1;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 20px;
+}
+.recomendaciones-container{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 20px;
+}
+.r1{
+    grid-column: 1/3;
+}
+.r2{
+    grid-column: 3/5;
+}
+.r3{
+    grid-column: 2/4;
+}
+.recomendaciones-container div{
+    background: rgb(105, 206, 22);
+    border-radius: 10px;
+    padding: 20px;
+}
+.recomendaciones-container h3{
+    font-size: 20px;
+}
+.recomendaciones-container p{
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 25px;
+}
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background: rgb(27, 27, 27);
+}
+footer p{
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+@media (max-width:1080px){
+    .mision-vision-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5px;
+    }
+    .mision-vision-img{
+        height: 150px;
+        width: 150px;
+    }
+    .mision-vision-img img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    .mision-vision-text h3{
+        font-size: 25px;
+    }
+    
+}
+@media (max-width:900px){
+    /*Navegador*/
+    .logo-container{
+        grid-column: 1/10;
+    }
+    .logo-container p{
+        font-size: 30px;
+    }
+    .compra-container{
+        display: none;
+    }
+    .enlace-container{
+        display: none;
+    }
+    .menu-container{
+        display: block;
+        text-align: end;
+    }
+    #menu i{
+        font-size: 30px;
+    }
+    .enlaces-container{
+        grid-column: 10/13;
+        display: flex;
+        justify-content: flex-end;
+    }
+    /*Section: Empresa*/
+    .empresa-img,.empresa-text{
+        grid-column: 1/-1;
+    }
+    .empresa-img{
+        text-align: center;
+        margin: 1rem ;
+    }
+    .empresa-img img{
+        max-width: 600px;
+    }
+    /*Section: personal*/
+    .personal-img,.personal-text{
+        grid-column: 1/-1;
+    }
+    .personal-img{
+        text-align: center;
+        margin: 1rem ;
+    }
+    .personal-img img{
+        max-width: 600px;
+    }
+}
+@media(max-width:700px){
+    .mision-vision-container{
+        grid-column: 1/-1;
+    }
+    .vision-container{
+        margin-top: 3rem;
+    }
+    .r1,.r2,.r3{
+        grid-column: 1/-1;
+    }
+}
